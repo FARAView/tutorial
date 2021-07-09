@@ -2,7 +2,7 @@ import pandas as pd
 import datetime
 from sqlalchemy import create_engine
 
-df = pd.read_csv("./unzipped/FARA_All_Registrants.csv")
+df = pd.read_csv("./unzipped/exhibition_schedule.csv", encoding='utf-8')
 df = df.where(pd.notnull(df), None)  # replace all nan values to None
 
 
