@@ -5,6 +5,10 @@ from sqlalchemy import create_engine
 df = pd.read_csv("./unzipped/exhibition_schedule.csv", encoding='utf-8')
 df = df.where(pd.notnull(df), None)  # replace all nan values to None
 
+del df['Unnamed: 6']
+del df['Unnamed: 7']
+del df['Unnamed: 8']
+del df['Unnamed: 9']
 
 def format_datetime(date_str):
     if date_str:
