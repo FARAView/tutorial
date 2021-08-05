@@ -13,7 +13,7 @@ del df['Unnamed: 9']
 # write df on db
 from conn import username, password, host, port, database
 engine = create_engine(f'postgresql://{username}:{password}@{host}:{port}/{database}')
-df.to_sql(name='exhibition_schedule_sy', con=engine, index=False, if_exists='replace')
+df.to_sql(name='exhibition_schedule_bm', con=engine, index=False, if_exists='replace')
 
 if __name__ == "__main__":
     pass
